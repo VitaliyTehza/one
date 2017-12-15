@@ -7,8 +7,9 @@ class ItemsController < ApplicationController
 	  end
 
 	  def create
-	  	params[:item][:user_id]=current_user.id
-	  	@item=Item.create(item_params)
+	  	pp params[:item][:user_id]=current_user.id
+	  	params[:item][:image]
+	  	pp @item=Item.create(item_params)
 	  	if @item.save
 	  		redirect_to root_path
 	  	else
@@ -31,7 +32,7 @@ class ItemsController < ApplicationController
 	  end
 
 	  def show
-	  	
+	  	@comments=Itemcomment.where(item_id: @item.id)
 	  end
 
 	  private

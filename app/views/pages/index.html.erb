@@ -2,7 +2,7 @@
 
 <div>
 <% @items.each do |item| %>
-<hr><%= image_tag item.image.url(:medium) %>
+<hr><p><%= image_tag(item.image.url, width: 300, height: 300)%></p>
   <h1><%= link_to item.name, item_path(item.id) %></h1>
   <p>Author: <%= item.user.email %> | 
    Create at: <%= item.created_at %></p>
