@@ -1,16 +1,15 @@
-<%= link_to "Create new post", new_post_path, class: "btn btn-default" %>
+<%= link_to "Create new item", new_item_path, class: "btn btn-default" %>
 
 <div>
-<% @posts.each do |post| %>
-<hr>
-  <h1><%= link_to post.title, post_path(post.id) %></h1>
-  <p><%= image_tag post.user.avatar.url(:thumb), width: 30, height: 30 %></p>
-  <p>Author: <%= post.user.nickname %> | 
-   Create at: <%= post.created_at %></p>
-  <% if current_user != nil and current_user.id == post.user_id %>
+<% @items.each do |item| %>
+<hr><%= image_tag item.image.url(:medium) %>
+  <h1><%= link_to item.name, item_path(item.id) %></h1>
+  <p>Author: <%= item.user.email %> | 
+   Create at: <%= item.created_at %></p>
+  <% if current_user != nil and current_user.id == item.user_id %>
   <p>
-  <%= link_to "Edit",  edit_post_path(post.id) %> or
-  <%= link_to "Delete", post_path(post.id), data: {confirm: 'Rili deleted your post?'}, method: :delete %>
+  <%= link_to "Edit",  edit_item_path(item.id) %> or
+  <%= link_to "Delete", item_path(item.id), data: {confirm: 'Rili deleted your post?'}, method: :delete %>
   </p>
   <%end%>
 <%end%>
