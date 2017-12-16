@@ -1,4 +1,4 @@
-<h1><%= @item.name%></h1>
+<center><h1><%= @item.name%></h1>
 <p><%= @item.description%></p>
 
 <% @comments.each do |comment| %>
@@ -10,10 +10,11 @@
         <%= flash[:notice]%>
 <% end %>
 
-<p><%= f.label "Write Comment" %></p>
-<%= f.text_area :text, cols: 20, rows: 5 %><br />
+<p><%= f.label "Введите комментарий" %></p>
+<p><%= f.text_area :text, cols: 20, rows: 5 %></p><br/>
 
-<p><%= f.submit "Send"%></p>
+<p><%= f.submit "Отправить"%></p></br>
 
 <%end%>
+</center>
 
