@@ -17,10 +17,15 @@
        <center> </br><p><%= image_tag(item.image.url, width: 300, height: 300)%></p>
 
   <h1><%= link_to item.name, item_path(item.id) %></h1>
+<<<<<<< HEAD
   
   <%= image_tag item.user.avatar.url(:thumb), width: 30, height: 30 %>
 
   <p><span style="color: green;">Автор:<%= item.user.nickname %></span>
+=======
+
+  <p><span style="color: green;">Автор:<%= item.user.email %></span>
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
 
   <span style="color: grey;">| Опубликовано: <%= item.created_at %></span></p>
 
@@ -29,7 +34,11 @@
     <p><span style="color: #38678b;">
 
   <%= link_to "Редактировать",  edit_item_path(item.id), class: "btn btn-primary active" %>
+<<<<<<< HEAD
   <%= link_to "Удалить", item_path(item.id), class: "btn btn-primary active", data: {confirm: 'Are you sure?'}, method: :delete %>
+=======
+  <%= link_to "Удалить", item_path(item.id), class: "btn btn-primary active", data: {confirm: 'Rili deleted your post?'}, method: :delete %>
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
  </span></p>
        </center>
       >

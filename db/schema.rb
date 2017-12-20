@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171220124629) do
+=======
+ActiveRecord::Schema.define(version: 20171215084104) do
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -81,7 +85,10 @@ ActiveRecord::Schema.define(version: 20171220124629) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+<<<<<<< HEAD
     t.string "nickname"
+=======
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

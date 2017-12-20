@@ -12,6 +12,10 @@ ActiveAdmin.register Item do
 #   permitted
 # end
 
+<<<<<<< HEAD
 permit_params :description, :name, :user_id
+=======
+permit_params :title, :body, :user_id
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
 
 end

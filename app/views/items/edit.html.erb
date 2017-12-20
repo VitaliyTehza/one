@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_for :item, url:item_path, method: :patch do |f| %>
 <% if @item.errors.any? %>
 <% @item.errors.full_messages.each do |msg| %>
@@ -8,3 +9,8 @@
 <%= render 'items/form', f:f %>
 
 <% end %>
+=======
+<% form_for @item, url:item_path do |f|%>
+<%=render 'items/form', f:f %>
+<%end%>
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab

@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          has_many :titles
+<<<<<<< HEAD
          has_many :itemcomments
 
 
@@ -15,4 +16,6 @@ class User < ApplicationRecord
          validates :nickname, :email, uniqueness: true
          validates :nickname, format: { with: /\A[a-zA-Z0-9]+\Z/ }
          validates :nickname, format: { without: /\s/ }
+=======
+>>>>>>> de9a8739dc94bd0c9f64d12b4c0824b69be53dab
 end
